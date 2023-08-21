@@ -1,5 +1,5 @@
 ---
-- hosts: servers
+- hosts: _workers
   tasks:
     - name: create test file
       file:
