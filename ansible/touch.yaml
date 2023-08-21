@@ -3,5 +3,5 @@
   tasks:
     - name: create test file
       file:
-        path: /tmp/testdir.txt
+        path: /tmp/testdir
         state: directory
