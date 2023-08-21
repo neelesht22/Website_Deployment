@@ -1,0 +1,26 @@
+steps:
+ubuntu@ip-172-31-37-135:~$ sudo useradd jenkins -m -s /bin/bash
+ubuntu@ip-172-31-37-135:~$ ls /home
+jenkins  ubuntu
+$ sudo passwd jenkins
+$ sudo visudo
+jenkins   ALL=(ALL)      NOPASSWD:  ALL
+add /usr/bin/ansible to jenkins global path ansible installer location
+
+jenkins user $ ssh-keygen
+
+$ cat /etc/ansible/ansible.cfg
+[defaults]
+host_key_checking = False
+remote_user = ubuntu
+
+in browser: in jenkins:
+create a freestyle job: ansible-test
+add source code management - git:
+https://github.com/02ygiuwsdbklh/ansible-sample.git
+*/main
+execute shell: ansible-playbook wordpress.yaml
+
+[no need to configure global sec credentials of ssh-privkey in jenkins unlike mentioned in blog posts in internet]
+
+

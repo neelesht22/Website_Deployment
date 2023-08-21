@@ -1,0 +1,19 @@
+---
+plugin: aws_ec2
+aws_access_key: AKIARVBFXMF6KXYFAREF
+aws_secret_key: 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
+
+regions:
+  - us-east-1
+
+filters:
+  tag:Team:
+#    - DevOPS
+    - workers
+
+keyed_groups:
+  - key: tags.Team
+
+hostnames:
+  - ip-address
+
